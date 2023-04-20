@@ -19,7 +19,12 @@ const userSchema = new Schema({
   password: {
     type: String,
     required: true
-  }
+  },
+  role: { 
+    type: String, 
+    required: true, 
+    default: 'user', 
+    enum: ['user', 'admin', 'mentor'] }
 });
 
 // Create a model from the schema
